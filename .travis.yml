@@ -1,18 +1,16 @@
 language: python
 python:
-  - "2.7"
+- '2.7'
 script:
-  - pip install -r requirements.txt pex
-  - make
-cache:
-  directories:
-    # - "$HOME/.pip"
+- pip install -r requirements.txt pex
+- make
 deploy:
   provider: releases
   api_key:
-    secure: tTBYdvgVQ2HCSuUSAhCEPaxgfll24nFDDLINaf32ZQMhvyih3/BJ9v/T423xnXNjSa2+yaNDwt4VigWqDdiTD6jj5HfanV0rDwXE+WkfOZoc6+u2Vi8VczmxI16RLJrnFizfgq5KDrBxorqs++0+qB/fCj+aBIGYW4Aga12oR2mZHjq4ujVzUf2QncP5FoZjtK6EwTVqxP/Ep/lsi0Qa1oNl3xuq1+Li9VaZX3odw8lQCpAWUxaVpHuAcZZTZKzxdUg4pRSyMCtlXIGG/OYHMrChLJBv5+qnTZw6SvzVFhL6zX3BWf7VPHGdVxNroG7PybZCvvt8Mg9BnhcPX3gDDYulk60vBNPKBA1/F5idXNvT+4eOYCTNKz0saSA4cnIheC4WgpcCaa3lbot7RNd3tTuJApAcjuKyeTOGv8qhfxWyUzYyusWK+inGSUgmuNr4RKaBnwN9rkLFFYIV66bbhtsIFRkxw8zLgN974FE7hEyOiJxElRdDpJUEBP/4EBmHqhOLW9ahjZ+rX0qCqjB2JidNhVdTeNYDqjCxVMowwyX6LOg6y93VXldbmyV/4hMYb2/sAgzG9nxj7S2+/WLH7oSOwr4tCMMgFBXgYMyqXSNVBNoSzoL5TiAe9F4c3JnzQGyijLIHsE+EanxBJwdD1pf4MaR8iebmSRX3uYuRab4=
+    secure: Eo8oRmVDM2C8P039IhjO+2Sl11Ki79gPO3kbj/+FyjydCvzxk2d3xzkwyQFwR4pmax/IARF5rUxmkKVR3+QkNAcpUSlZ/o4X/ZC58GFwotvd9bgo73fnxEN1/kJRljI6ciqKGQPcuYZwgEOyOkNqyttGx1xBlaX8mFXGKsOrpjjFMQeLRBmfLILi2h83barmA3uItecMKIuP5r2qFj/v585/HN7pO2g6G5j5wcf/OYlic5iLel/baqE2HAjeqXXF3zcp84/EviLlTygrSI9Vj+IFj5mhwFuK9ZPHN+oKxMOz2aWKeUx9qmKvc87Rit+yu9qOSL9oUoro6c+hXVKfc/osOsMpwvX1pdy7FeCvWQQOQPw1VF5OWHaJv0rzTrVZH18xXSTYZlN7g/DGW5pYj/IZh2DndHXkMOfsi4434l8i42owLv7xyEE3s6nWwizY3euJa1GfUOJZsjK9dnsiLhH9Ptq581CQoQeRp8adXkUh84Gx/5XAEH8qrMv5ah+CDqod+BxQMGfDCSuKCEQ7bN6rhTzP5m+RACEsv0Z322T2PsyYG+FRai8ztELhxQd+1bUizbOAZG3WWciCN6+h2hZEk5Se+l+gfxx1yI3jrwmK+De83O059kQA/mioFJ1GLsSbq7u1xdboLIZmlg/4szFenCV5fgx1L4WGoOjFRMY=
   file_glob: true
-  file: *.pex
+  file: "*.pex"
   skip_cleanup: true
   on:
+    repo: yaroot/semaphore-deploy
     tags: true
