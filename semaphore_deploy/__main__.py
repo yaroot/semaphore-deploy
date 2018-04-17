@@ -64,7 +64,6 @@ def parse_env(input):
 @click.option('--debug', is_flag=True, help='debug mode')
 @click.option('--environment', '-e', multiple=True)
 def main(addr, token, project, template, dry_run, playbook, debug, environment):
-    print(addr, project, template, dry_run, playbook, debug, environment)
     addr = addr.rstrip('/')
     payload = {}
     envs = parse_env(environment)
