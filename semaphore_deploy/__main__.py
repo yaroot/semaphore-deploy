@@ -17,7 +17,7 @@ def lookup_project(addr, token, name):
     projects = filter(f, r.json())
     if len(projects) == 0:
         assert False, "Can't find project named <{}>".format(name)
-    elif len(projects) > 0:
+    elif len(projects) > 1:
         assert False, "Found more than 1 project named <{}>".format(name)
     return projects[0]['id']
 
